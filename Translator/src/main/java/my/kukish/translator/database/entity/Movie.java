@@ -1,13 +1,7 @@
 package my.kukish.translator.database.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.ZonedDateTime;
 
@@ -19,6 +13,8 @@ import java.time.ZonedDateTime;
 @Table(name = "movies")
 public class Movie extends TimestampedEntity<Long> {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter(AccessLevel.NONE)
     private Long id;
     private String title;
     private String description;

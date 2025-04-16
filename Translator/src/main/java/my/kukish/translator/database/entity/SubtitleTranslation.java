@@ -1,10 +1,7 @@
 package my.kukish.translator.database.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.io.Serializable;
 import java.time.ZonedDateTime;
@@ -17,6 +14,8 @@ import java.time.ZonedDateTime;
 @Table(name = "subtitle_translations")
 public class SubtitleTranslation extends TimestampedEntity<Integer> {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter(AccessLevel.NONE)
     private Integer id;
 
     @Column(name = "selected_text")

@@ -1,10 +1,7 @@
 package my.kukish.translator.database.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @EqualsAndHashCode(callSuper = true)
 @Entity
@@ -14,6 +11,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "subtitles")
 public class Subtitle extends TimestampedEntity<Integer> {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter(AccessLevel.NONE)
     private Integer id;
     @Column(name = "start_time")
     private Double startTime;
