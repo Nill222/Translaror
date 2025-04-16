@@ -8,13 +8,13 @@ import java.time.ZonedDateTime;
 
 @Value
 public class SubtitleTranslatorReadDto {
-    Long id;
+    Integer id;
     String selectedText;
     String translatedText;
     String sourceLanguage;
     String targetLanguage;
     ZonedDateTime translatedAt;
-    User user;
-    Subtitle subtitle;
+    UserReadDto user;
+    SubtitleReadDto subtitle;
 
 }

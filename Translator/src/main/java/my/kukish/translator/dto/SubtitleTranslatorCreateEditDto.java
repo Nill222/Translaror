@@ -11,6 +11,6 @@ public class SubtitleTranslatorCreateEditDto {
     String sourceLanguage;
     String targetLanguage;
     ZonedDateTime translatedAt;
-    int userId;
+    Long userId;
     int subtitleId;
 }
