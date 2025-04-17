@@ -2,8 +2,6 @@ package my.kukish.translator.database.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.io.Serializable;
 import java.time.ZonedDateTime;
 
 @Entity

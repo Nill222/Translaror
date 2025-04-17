@@ -13,5 +13,4 @@ public class UserReadDto {
     String passwordHash;
     ZonedDateTime createdAt;
     Role role;
-
 }

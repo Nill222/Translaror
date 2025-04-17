@@ -11,5 +11,4 @@ public class UserCreateEditDto {
     String passwordHash;
     ZonedDateTime createdAt;
     Role role;
-
 }

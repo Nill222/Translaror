@@ -17,12 +17,17 @@ public class User extends TimestampedEntity<Long> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.NONE)
     private Long id;
+
     private String username;
+
     private String email;
+
     @Column(name = "password_hash")
     private String passwordHash;
+
     @Column(name = "created_at")
     private ZonedDateTime createdAt;
+
     private Role role;
 
     @Override

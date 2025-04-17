@@ -2,7 +2,9 @@ package my.kukish.translator.Mapper;
 
 import my.kukish.translator.database.entity.User;
 import my.kukish.translator.dto.UserCreateEditDto;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UserCreateEditMapper implements Mapper<UserCreateEditDto, User > {
 
     @Override

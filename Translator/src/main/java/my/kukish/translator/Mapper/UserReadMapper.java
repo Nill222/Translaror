@@ -17,6 +17,4 @@ public class UserReadMapper implements Mapper<User, UserReadDto> {
                 object.getRole()
         );
     }
-
-
 }

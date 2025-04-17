@@ -12,11 +12,7 @@ import java.io.Serializable;
 @Setter
 public abstract class TimestampedEntity<T extends Serializable> implements BaseEntity<T> {
 
-
-
     @PrePersist
     protected void onCreate() {
     }
-
-
 }
