@@ -7,5 +7,5 @@ public class SubtitleCreateEditDto {
     double startTime;
     double endTime;
     String text;
-    int movieId;
+    Long movieId;
 }

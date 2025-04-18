@@ -35,7 +35,7 @@ public class SubtitleCreateEditMapper implements Mapper<SubtitleCreateEditDto, S
         return  toObject;
     }
 
-    private Movie getMovie(Integer movieId) {
+    private Movie getMovie(Long movieId) {
         return Optional.ofNullable(movieId)
                 .flatMap(movieRepository::findById)
                 .orElse(null);
