@@ -1,11 +1,12 @@
 package my.kukish.translator.database.entity;
 
+import com.querydsl.core.annotations.QueryEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.ZonedDateTime;
 
-@Entity
+@QueryEntity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

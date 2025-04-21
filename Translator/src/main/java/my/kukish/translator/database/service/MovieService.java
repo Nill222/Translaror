@@ -5,7 +5,9 @@ import my.kukish.translator.Mapper.MovieCreateEditMapper;
 import my.kukish.translator.Mapper.MovieReadMapper;
 import my.kukish.translator.database.repository.MovieRepository;
 import my.kukish.translator.dto.MovieCreateEditDto;
+import my.kukish.translator.dto.MovieFilter;
 import my.kukish.translator.dto.MovieReadDto;
+import my.kukish.translator.dto.UserReadDto;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,6 +21,12 @@ public class MovieService {
     private final MovieRepository movieRepository;
     private final MovieReadMapper movieReadMapper;
     private final MovieCreateEditMapper movieCreateEditMapper;
+
+    public List<MovieReadDto> findAll(MovieFilter filer) {
+        return movieRepository.findAllByFilter(filer).stream()
+                .map(movieReadMapper::map)
+                .toList();
+    }
 
     public List<MovieReadDto> findAll() {
         return movieRepository.findAll()
