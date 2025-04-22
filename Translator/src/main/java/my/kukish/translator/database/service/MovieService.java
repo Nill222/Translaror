@@ -6,6 +6,7 @@ import my.kukish.translator.Mapper.MovieReadMapper;
 import my.kukish.translator.database.repository.MovieRepository;
 import my.kukish.translator.dto.MovieCreateEditDto;
 import my.kukish.translator.dto.MovieReadDto;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,6 +23,13 @@ public class MovieService {
 
     public List<MovieReadDto> findAll() {
         return movieRepository.findAll()
+                .stream()
+                .map(movieReadMapper::map)
+                .toList();
+    }
+
+    public List<MovieReadDto> findByTitle(String title, Pageable pageable) {
+        return movieRepository.findByTitleContainingIgnoreCase(title, pageable)
                 .stream()
                 .map(movieReadMapper::map)
                 .toList();
