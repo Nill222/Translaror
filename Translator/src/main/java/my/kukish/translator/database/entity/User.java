@@ -25,9 +25,11 @@ public class User extends TimestampedEntity<Long> {
     @Column(name = "password_hash")
     private String passwordHash;
 
-    @Column(name = "created_at")
+    @Column(name = "created_at", columnDefinition = "TIMESTAMP")
     private ZonedDateTime createdAt;
 
+    @Column(name = "role")
+    @Enumerated(EnumType.STRING)
     private Role role;
 
     @Override
