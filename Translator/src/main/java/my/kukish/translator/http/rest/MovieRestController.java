@@ -1,11 +1,8 @@
 package my.kukish.translator.http.rest;
 
 import lombok.RequiredArgsConstructor;
-import my.kukish.translator.database.entity.Movie;
 import my.kukish.translator.database.service.MovieService;
-import my.kukish.translator.database.service.UserService;
 import my.kukish.translator.dto.*;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/movie")
