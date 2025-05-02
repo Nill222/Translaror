@@ -1,6 +1,7 @@
 package my.kukish.translator.dto;
 
 import lombok.Value;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.ZonedDateTime;
 
